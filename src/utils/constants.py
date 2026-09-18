@@ -1,0 +1,26 @@
+from src.config.config import ROOT_FOLDER_PATH, Path, load_config
+
+LOG_FOLDER_PATH: Path = ROOT_FOLDER_PATH / "logs"
+
+CONFIG: dict[str, str | None] = load_config()
+
+DEFAULT_ENV: str = "dev"
+
+ENV: str = CONFIG.get("ENV") or DEFAULT_ENV
+
+IS_PROD: bool = ENV == "prod"
+
+TEAMS_WORKFLOW_CONFIG: dict[str, str | None] = {
+    "url": CONFIG.get("TEAMS_WORKFLOW_URL"),
+    "title": ROOT_FOLDER_PATH.name,
+}
+
+DEFAULT_GRAYLOG_SEARCH_QUERY_INTERVAL: int = 15
+
+DEFAULT_GRAYLOG_MAX_SEARCH_QUERY_INTERVAL: int = 1440
+GRAYLOG_MAX_SEARCH_QUERY_INTERVAL: int = int(
+    CONFIG.get("GRAYLOG_MAX_SEARCH_QUERY_INTERVAL")
+    or DEFAULT_GRAYLOG_MAX_SEARCH_QUERY_INTERVAL
+)
+
+DEFAULT_GRAYLOG_SEARCH_QUERY_LIMIT: int = 9999

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "4756",
+    "name": "A member was added to a security-enabled universal group",
+    "description": "A Windows event with ID 4756 was observed on the relevant date. This event occurs when a new user is <b>added</b> to a <u>security-enabled universal domain group</u>.",
+    "text": "<li>User <b>{dst_user}</b> was added to the group <b>{group_name}</b> by <b>{src_user}</b></li>",
+    "filters": {
+      "included": {
+        "src_users": [],
+        "dst_users": [],
+        "groups": ["Domain Admins", "Administrators", "Enterprise Admins"]
+      },
+      "excluded": {
+        "src_users": ["test"],
+        "dst_users": ["test2"],
+        "groups": ["test-group"]
+      }
+    }
+  },
+  {
+    "id": "4732",
+    "name": "A member was added to a security-enabled local group",
+    "description": "A Windows event with ID 4732 was observed on the relevant date. This event occurs when a new user is <b>added</b> to a <u>security-enabled local group</u>.",
+    "text": "<li>User <b>{dst_user}</b> was added to the group <b>{group_name}</b> by <b>{src_user}</b></li>",
+    "filters": {
+      "included": {
+        "src_users": [],
+        "dst_users": [],
+        "groups": []
+      },
+      "excluded": {
+        "src_users": [],
+        "dst_users": [],
+        "groups": []
+      }
+    }
+  },
+  {
+    "id": "4728",
+    "name": "A member was added to a security-enabled global group",
+    "description": "A Windows event with ID 4728 was observed on the relevant date. This event occurs when a new user is <b>added</b> to a <u>security-enabled global domain group</u>.",
+    "text": "<li>User <b>{dst_user}</b> was added to the group <b>{group_name}</b> by <b>{src_user}</b></li>",
+    "filters": {
+      "included": {
+        "src_users": [],
+        "dst_users": [],
+        "groups": []
+      },
+      "excluded": {
+        "src_users": [],
+        "dst_users": [],
+        "groups": ["test-group"]
+      }
+    }
+  },
+  {
+    "id": "4726",
+    "name": "A user account was deleted",
+    "description": "A Windows event with ID 4726 was observed on the relevant date. This event occurs when a user account is <b>deleted</b>.",
+    "text": "<li>User account <b>{dst_user}</b> was deleted by <b>{src_user}</b></li>",
+    "filters": {
+      "included": {
+        "src_users": [],
+        "dst_users": [],
+        "groups": []
+      },
+      "excluded": {
+        "src_users": ["test"],
+        "dst_users": [],
+        "groups": []
+      }
+    }
+  },
+  {
+    "id": "4722",
+    "name": "A user account was enabled",
+    "description": "A Windows event with ID 4722 was observed on the relevant date. This event occurs when a user account is <b>enabled</b>.",
+    "text": "<li>User account <b>{dst_user}</b> was enabled by <b>{src_user}</b></li>",
+    "filters": {
+      "included": {
+        "src_users": [],
+        "dst_users": ["admin", "administrator"],
+        "groups": []
+      },
+      "excluded": {
+        "src_users": [],
+        "dst_users": [],
+        "groups": []
+      }
+    }
+  },
+  {
+    "id": "4720",
+    "name": "A user account was created",
+    "description": "A Windows event with ID 4720 was observed on the relevant date. This event occurs when a user account is <b>created</b>.",
+    "text": "<li>User account <b>{dst_user}</b> was created by <b>{src_user}</b></li>",
+    "filters": {
+      "included": {
+        "src_users": ["admin", "administrator"],
+        "dst_users": [],
+        "groups": []
+      },
+      "excluded": {
+        "src_users": [],
+        "dst_users": [],
+        "groups": []
+      }
+    }
+  }
+]

@@ -1,0 +1,129 @@
+<table style="background: #fff; line-height: 1.5; width: 100%">
+    <thead style="background: #f8f9f9">
+        <th colspan="2" style="padding: 12px; text-align: center; border: none">
+            <a href="https://github.com/musaokankurtkaya" target="_blank">
+                <img
+                    src="https://avatars.githubusercontent.com/u/209168101"
+                    alt="logo"
+                    width="90"
+                />
+            </a>
+        </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td
+                style="
+                    color: #c27aff;
+                    padding: 12px;
+                    font-weight: bold;
+                    border: none;
+                "
+            >
+                Date
+            </td>
+            <td style="border: none">{{ date }}</td>
+        </tr>
+        <tr>
+            <td
+                style="
+                    color: #c27aff;
+                    padding: 12px;
+                    font-weight: bold;
+                    border: none;
+                "
+            >
+                Created By
+            </td>
+            <td style="border: none">
+                <a href="https://github.com/musaokankurtkaya" target="_blank">
+                    musaokankurtkaya
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td
+                style="
+                    color: #c27aff;
+                    padding: 12px;
+                    font-weight: bold;
+                    border: none;
+                "
+            >
+                Windows Security Event Id
+            </td>
+            <td style="border: none">{{ wse_id }}</td>
+        </tr>
+        <tr>
+            <td
+                style="
+                    color: #c27aff;
+                    padding: 12px;
+                    font-weight: bold;
+                    border: none;
+                "
+            >
+                Windows Security Event Name
+            </td>
+            <td style="border: none">{{ wse_name }}</td>
+        </tr>
+        <tr>
+            <td
+                style="
+                    color: #c27aff;
+                    padding: 12px;
+                    font-weight: bold;
+                    border: none;
+                "
+            >
+                Windows Security Event Description
+            </td>
+            <td style="border: none">{{ wse_desc }}</td>
+        </tr>
+        <tr>
+            <td
+                style="
+                    color: #c27aff;
+                    padding: 12px;
+                    font-weight: bold;
+                    border: none;
+                "
+            >
+                Windows Security Events
+            </td>
+            <td style="border: none">
+                <ul>
+                    {{ wses }}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td
+                style="
+                    color: #c27aff;
+                    padding: 12px;
+                    font-weight: bold;
+                    border: none;
+                "
+            >
+                Windows Security Event Log
+            </td>
+            <td style="border: none">
+                <span
+                    style="
+                        display: inline-block;
+                        border: 1px solid #edeff2;
+                        background: #f7f9f9;
+                        border-radius: 4px;
+                        padding: 12px;
+                        max-width: 900px;
+                        overflow: auto;
+                        box-sizing: border-box;
+                    "
+                >
+                    {{ wse_log }}
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
